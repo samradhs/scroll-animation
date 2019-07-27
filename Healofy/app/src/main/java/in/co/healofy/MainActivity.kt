@@ -30,22 +30,15 @@ class MainActivity : AppCompatActivity(), PostListener, View.OnTouchListener {
         when (event?.action) {
 
             MotionEvent.ACTION_DOWN -> {
-//                        dX = view!!.x - event.rawX
                 dY = view!!.y - event.rawY
             }
 
             MotionEvent.ACTION_MOVE -> {
 
                 Log.e(TAG, "moving: $view")
-//                        val newX = event.rawX + dX
                 val newY = event.rawY + dY
 
-//                        if ((newX <= 0 || newX >= screenWidth - view!!.width) || (newY <= 0 || newY >= screenHeight - view.height)) {
-//                            return true
-//                        }
-
                 view!!.animate()
-//                            .x(newX)
                     .y(newY)
                     .setDuration(0)
                     .start()
@@ -60,15 +53,9 @@ class MainActivity : AppCompatActivity(), PostListener, View.OnTouchListener {
 
         Toast.makeText(this, string, Toast.LENGTH_LONG).show()
         showCommentsDialog()
-
-//        var dX: Float = 0.toFloat()
     }
 
     private fun showCommentsDialog() {
-
-//        alertDialog.findViewById<View>(R.id.d_tv)!!.setOnTouchListener(this)
-//        alertDialog.listView.setOnTouchListener()
-//        alertDialog.setOnTo
 
         dialog_cont.visibility = View.VISIBLE
         dialog_cont.setOnClickListener {
