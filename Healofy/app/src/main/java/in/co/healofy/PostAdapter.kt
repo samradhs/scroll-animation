@@ -12,7 +12,7 @@ class PostAdapter(private val items: List<String>,
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         val inflater = LayoutInflater.from(parent.context)
-        val postView = inflater.inflate(R.layout.item_post, parent, false)
+        val postView = inflater.inflate(R.layout.item_tv, parent, false)
         return PostVH(postView)
     }
 
@@ -34,7 +34,7 @@ class PostAdapter(private val items: List<String>,
 
 class PostVH(view: View): RecyclerView.ViewHolder(view) {
 
-    val postTv: TextView = view.findViewById(R.id.post_text)
+    val postTv: TextView = view.findViewById(R.id.tv_text)
 }
 
 interface PostListener {

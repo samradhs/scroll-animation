@@ -18,12 +18,13 @@
         android:visibility="gone"
         android:background="#66000000">
 
-        <LinearLayout
+        <android.support.v7.widget.RecyclerView
             android:id="@+id/d_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="10dp"
             android:background="@android:color/white"
-            android:orientation="vertical"/>
+            android:clipToPadding="false"/>
 
     </FrameLayout>
 
